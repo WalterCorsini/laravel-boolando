@@ -2,5 +2,22 @@
 
 {{--  qui il contenuto della pagine home page --}}
 @section('content')
-    <h1 class="fw-bold pt-5">Home page</h1>
+    <div class="container">
+        @foreach ($arrayProducts as $product)
+            <div class="card">
+                <div>
+                    <img src="{{ Vite::asset('resources/img/' . $product['frontImage']) }}" alt="img-card">
+                </div>
+                <div class="card-body">
+                    <span class="card-text">{{ $product['brand']}}</span>
+                    <span class="card-text text-uppercase fw-bold">{{ $product['name']}}</span>
+                    @if(isset($product['badges'][1]['value'])){
+                        <span class="card-text">{{ $product['badges'][1]['valueDiscount']}}</span>
+                    }
+                    @endif
+
+                </div>
+            </div>
+        @endforeach
+    </div>
 @endsection
