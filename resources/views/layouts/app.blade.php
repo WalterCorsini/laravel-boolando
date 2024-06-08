@@ -17,6 +17,7 @@
     {{-- dove verrà inserito il file della pagina che lo importa --}}
     @yield('content')
   </main>
+  @include('partials.footer') 
 
 </body>
 
