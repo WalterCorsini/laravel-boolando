@@ -25,6 +25,9 @@
         flex-direction: column;
         .img {
             position: relative;
+            img {
+                width: 100%;
+            }
             .tags {
                 position: absolute;
                 z-index: 1;
@@ -42,8 +45,18 @@
                 color: #ffffff;
                 padding: 3px;
             }
-            img {
-                width: 100%;
+            .heart{
+                position: absolute;
+                width: 40px;
+                aspect-ratio: 1;
+                top: 5%;
+                right: 0;
+                background-color: #ffffff;
+                text-align: center;
+                font-size: 30px;
+                .heart span{
+                    display: inline-block;
+                }
             }
         }
         .card-body {

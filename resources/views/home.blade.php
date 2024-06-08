@@ -25,7 +25,15 @@
                         @elseif(isset($product['badges'][1]['type']) === 'tag')
                             <span class="tag">{{$product['badges'][1]['value']}}</span>
                         @endif
+                        {{-- heart --}}
                         </div>
+                            <div class="heart">
+                                @if($product['isInFavorites'] === true)
+                                    <span class="text-danger">&hearts;</span>
+                                @else
+                                    <span>&hearts;</span>
+                                @endif
+                            </div>
                     </div>
 
                     <div class="card-body">
