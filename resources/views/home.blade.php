@@ -11,10 +11,9 @@
                 <div class="card-body">
                     <span class="card-text">{{ $product['brand']}}</span>
                     <span class="card-text text-uppercase fw-bold">{{ $product['name']}}</span>
-                    @if(isset($product['badges'][1]['value'])){
-                        <span class="card-text">{{ $product['badges'][1]['valueDiscount']}}</span>
-                    }
-                    @endif
+                    {{-- @if(isset($product['badges'][0]['priceDiscount']))
+                        <span class="card-text">{{ $product['badges'][0]['priceDiscount']}}</span>
+                    @endif --}}
 
                 </div>
             </div>
