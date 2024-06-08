@@ -2,23 +2,23 @@ header {
     background-color: #ff6900;
     width: 100%;
     height: 70px;
-    border: 1px solid black;
-}
-ul {
-    margin-block-start: 0 !important;
-    margin-block-end: 0 !important;
-    margin-bottom: 0 !important;
-    li {
-        list-style: none;
+
+    ul {
+        margin-block-start: 0 !important;
+        margin-block-end: 0 !important;
+        margin-bottom: 0 !important;
+        li {
+            list-style: none;
+        }
     }
-}
-li a,
-span a{
-    text-decoration: none;
-}
-img {
-    width: 200px;
-}
-.active {
-    border-bottom: 1px solid #ffffff;
+    li a,
+    span a {
+        text-decoration: none;
+    }
+    img {
+        width: 200px;
+    }
+    .active {
+        border-bottom: 1px solid #ffffff;
+    }
 }
