@@ -10,7 +10,7 @@
         </div>
         <div class="d-flex flex-column justify-content-center align-items-center fw-bold fs-5">
             <span> Trovaci anche su</span>
-            <ul class="d-flex gap-2 text-white">
+            <ul class="d-flex gap-2 justify-content-center align-items-center text-white">
                 <li>O</li>
                 <li>O</li>
                 <li>O</li>

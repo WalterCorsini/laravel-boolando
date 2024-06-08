@@ -1,5 +1,7 @@
 @use "./partials/header.scss" as *;
+@use "./partials/footer.scss" as *;
 @use "./partials/home.scss" as *;
+// @import '~@fortawesome/fontawesome-free/css/all.css';
 @import "~bootstrap/scss/bootstrap.scss";
 * {
     padding: 0;
@@ -7,10 +9,4 @@
     box-sizing: border-box;
 }
 
-footer{
-    height: 130px;
-    background-color: #000000;
-    .container{
-        width: 100% !important;
-    }
-}
+
