@@ -27,11 +27,7 @@
             {{-- heart --}}
         </div>
         <div class="heart">
-            @if ($product['isInFavorites'] === true)
-                <span class="text-danger">&hearts;</span>
-            @else
-                <span>&hearts;</span>
-            @endif
+                <span class="{{ $product['isInFavorites'] ? 'text-danger' : '' }}">&hearts;</span>
         </div>
         {{-- /TAGS ABSOLUTE --}}
     </div>

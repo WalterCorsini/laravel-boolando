@@ -1,19 +1,22 @@
-footer{
+footer {
     position: fixed;
     height: 15vh;
     background-color: #000000;
     bottom: 0;
     left: 0;
     z-index: 1;
-    .container{
+    .container {
         width: 100% !important;
-    ul{
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
-    }
-    .list{
-        margin-top: 25px;
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            a{
+                color: #ffffff;
+            }
+        }
+        .list {
+            margin-top: 25px;
+        }
     }
 }

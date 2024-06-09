@@ -12,8 +12,8 @@
     {{-- logo --}}
     <img src="{{ Vite::asset('resources/img/logo boolando.png') }}" alt="logo">
     <div>
-        <span class="text-white"><a class="text-white" href=""> O </a></span>
-        <span class="text-white"><a class="text-white" href=""> O </a></span>
-        <span class="text-white"><a class="text-white" href=""> O </a></span>
+        <span class="text-white"><a class="text-white" href=""> <i class="fa-regular fa-user"></i> </a></span>
+        <span class="text-white"><a class="text-white" href=""> <i class="fa-regular fa-heart"></i> </a></span>
+        <span class="text-white"><a class="text-white" href=""> <i class="fa-solid fa-bag-shopping"></i> </a></span>
     </div>
 </header>
