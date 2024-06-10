@@ -1,7 +1,7 @@
-@use "./partials/header.scss" as *;
-@use "./partials/footer.scss" as *;
-@use "./partials/home.scss" as *;
-@use "./partials/card.scss" as *;
+@use "./partials/header";
+@use "./partials/footer";
+@use "./partials/home";
+@use "./partials/card";
 @import "~bootstrap";
 @import "~fontawesome";
 
