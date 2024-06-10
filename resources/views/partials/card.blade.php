@@ -13,13 +13,12 @@
         <div class="tags">
 
             {{-- type discount --}}
-            @if (isset($product['badges'][0]['priceDiscount']))
-                @if ($product['badges'][0]['type'] === 'discount')
-                    <span class="discount">{{ $product['badges'][0]['value'] }}</span>
-                @elseif(isset($product['badges'][1]['type']))
-                    <span class="discount">{{ $product['badges'][1]['value'] }}</span>
-                @endif
+            @if ($product['badges'][0]['type'] === 'discount')
+                <span class="discount">{{ $product['badges'][0]['value'] }}</span>
+            @elseif(isset($product['badges'][1]['type']))
+                <span class="discount">{{ $product['badges'][1]['value'] }}</span>
             @endif
+
 
             {{-- type tag --}}
             @if ($product['badges'][0]['type'] === 'tag')
@@ -40,14 +39,32 @@
 
     {{-- text --}}
     <div class="card-body">
+        {{-- brand --}}
         <span class="card-text">{{ $product['brand'] }}</span>
+        {{-- name --}}
         <span class="card-text text-uppercase fw-bold">{{ $product['name'] }}</span>
+
+        {{-- price --}}
         <div>
-            @if (isset($product['badges'][0]['priceDiscount']))
-                <span class="card-text text-danger fw-bold">{{ $product['badges'][0]['priceDiscount'] }}</span>
+            @if ($product['badges'][0]['type'] === 'discount')
+                <?php $discount = str_replace(['-', '%'], '', $product['badges'][0]['value']); ?>
+                <span class="text-danger fw-bold">
+                    {{ bcdiv($product['price'] - ($product['price'] * $discount) / 100, 1, 2) }} </span>
+            @elseif(isset($product['badges'][1]['type']) && $product['badges'][1]['type'] === 'discount')
+                <?php $discount = str_replace(['-', '%'], '', $product['badges'][1]['value']); ?>
+                <span class="text-danger fw-bold">
+                    {{ bcdiv($product['price'] - ($product['price'] * $discount) / 100, 1, 2) }} </span>
             @endif
-            <span class="card-text {{ isset($product['badges'][0]['priceDiscount']) ? 'text-decoration-line-through' : 'text-danger fw-bold' }}">{{ $product['price'] }}</span>
+
+            @if (
+                (isset($product['badges'][1]['type']) && $product['badges'][1]['type'] === 'discount') ||
+                    $product['badges'][0]['type'] === 'discount')
+                <span class="text-decoration-line-through"> {{ $product['price'] }} </span>
+            @else
+                <span class="text-danger fw-bold"> {{ $product['price'] }} </span>
+            @endif
         </div>
+        {{-- price --}}
     </div>
     {{-- text --}}
 </div>
