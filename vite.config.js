@@ -12,7 +12,8 @@ export default defineConfig({
     resolve: {
         alias: {
             "~resources": "/resources/",
-            "~bootstrap": path.resolve(__dirname, "node_modules/bootstrap"),
+            "~bootstrap": path.resolve(__dirname, "node_modules/bootstrap/scss/bootstrap.scss"),
+            "~fontawesome": path.resolve(__dirname, "node_modules/@fortawesome/fontawesome-free/css/all.min.css"),
         },
     },
 });
